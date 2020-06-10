@@ -1,0 +1,56 @@
+info:
+  app:
+    name: is2-gateway
+    description: Http gateway of is2
+    version: 1.0.0
+
+spring:
+  jpa:
+    open-in-view: false
+  application:
+    name: gateway-server
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 100000
+
+
+server:
+  port: 8080
+is2:
+  jwt:
+    header:
+      name: jwt-auth
+
+zuul:
+  prefix: /api
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  strip-prefix: false
+  routes:
+    auth:
+      path: /v1/**/auth/**
+      serviceId: auth
+      stripPrefix: false
+      sensitiveHeaders: Cookie,Set-Cookie
+    gsbpm:
+      path: /v1/**/gsbpm/**
+      serviceId: gsbpm
+      stripPrefix: false
+
+ribbon:
+  eureka:
+    enabled: false
+  ReadTimeout: 100000
+
+auth:
+  ribbon:
+    listOfServers: localhost:9100
+
+gsbpm:
+  ribbon:
+    listOfServers: localhost:8200
