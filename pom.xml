@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>pom</packaging>
 	<modules>
-		<module>is2-security-common</module>
+		<module>is2-common</module>
 		<module>is2-cloud</module>
 		<module>is2-auth</module>
 		<module>is2-catalogue</module>

@@ -42,7 +42,7 @@ public class User implements Serializable {
 		this.password = user.password;
 	}
 
-	// bi-directional many-to-one association to Role
+
 	@ManyToOne
 	@JoinColumn(name = "role")
 	private UserRole role;
