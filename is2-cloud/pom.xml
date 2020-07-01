@@ -14,7 +14,7 @@
         <module>is2-gateway</module>
     </modules>
 
-    <artifactId>is2-cloud</artifactId>
     <groupId>it.istat.is2.cloud</groupId>
+	<artifactId>is2-cloud</artifactId>
 
 </project>
