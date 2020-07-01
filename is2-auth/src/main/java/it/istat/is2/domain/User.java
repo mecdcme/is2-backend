@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "USERS", schema = "public")
+@Table(name = "USERS", schema = "auth")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
