@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>is2-backend</artifactId>
-        <groupId>it.istat.is2</groupId>
+        <groupId>it.istat.is2backend</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,7 +14,7 @@
         <module>is2-gateway</module>
     </modules>
 
-    <groupId>it.istat.is2.cloud</groupId>
+    <groupId>it.istat.is2backend.cloud</groupId>
 	<artifactId>is2-cloud</artifactId>
 
 </project>
