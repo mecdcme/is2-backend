@@ -1,32 +1,26 @@
--- DROP DATABASE postgres;
+DROP SCHEMA IF EXISTS auth CASCADE;
+CREATE SCHEMA auth;
 
-CREATE DATABASE postgres
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'Italian_Italy.1252'
-    LC_CTYPE = 'Italian_Italy.1252'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
+DO '
+BEGIN
+execute ''alter database ''||current_database()||'' set search_path to auth,public;'';
+END;
+';
 
-COMMENT ON DATABASE postgres
-    IS 'default administrative connection database';
-    
+SET search_path to auth,public;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
   
-CREATE TABLE public."ROLES" (
+CREATE TABLE auth."ROLES" (
     id bigint NOT NULL,
     "NAME" text
 );
 
+ALTER TABLE auth."ROLES" OWNER TO postgres;
 
-ALTER TABLE public."ROLES" OWNER TO postgres;
-
---
--- TOC entry 204 (class 1259 OID 16398)
--- Name: USERS; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public."USERS" (
+CREATE TABLE auth."USERS" (
     id bigint NOT NULL,
     username text,
     name text,
@@ -34,55 +28,19 @@ CREATE TABLE public."USERS" (
     password text
 );
 
+ALTER TABLE auth."USERS" OWNER TO postgres;
 
-ALTER TABLE public."USERS" OWNER TO postgres;
-
---
--- TOC entry 2693 (class 2606 OID 16397)
--- Name: ROLES USER_ROLES_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public."ROLES"
+ALTER TABLE ONLY auth."ROLES"
     ADD CONSTRAINT "USER_ROLES_pkey" PRIMARY KEY (id);
 
-
---
--- TOC entry 2695 (class 2606 OID 16402)
--- Name: USERS pk; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public."USERS"
+ALTER TABLE ONLY auth."USERS"
     ADD CONSTRAINT pk PRIMARY KEY (id);
 
+ALTER TABLE ONLY auth."USERS"
+    ADD CONSTRAINT rolefk FOREIGN KEY (role) REFERENCES auth."ROLES"(id);
 
---
--- TOC entry 2696 (class 2606 OID 16403)
--- Name: USERS rolefk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
+INSERT INTO auth."ROLES" (id, "NAME") VALUES (1, 'ADMIN');
+INSERT INTO auth."ROLES" (id, "NAME") VALUES (2, 'GUEST');
 
-ALTER TABLE ONLY public."USERS"
-    ADD CONSTRAINT rolefk FOREIGN KEY (role) REFERENCES public."ROLES"(id);
-
-
--- Completed on 2020-03-19 19:16:29
-
---
--- PostgreSQL database dump complete
---
-
-
-INSERT INTO public."ROLES" (id, "NAME") VALUES (1, 'ADMIN');
-INSERT INTO public."ROLES" (id, "NAME") VALUES (2, 'GUEST');
-
-
---
--- TOC entry 2824 (class 0 OID 16398)
--- Dependencies: 204
--- Data for Name: USERS; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public."USERS" (id, username, name, role, password) VALUES (1, 'admin@is2.it', 'Administrator', 1, '$2a$10$VB7y/I.oD16QBVaExgH1K.VEuBUKRyXcCUVweUGhs1vDl0waTQPmC');
-INSERT INTO public."USERS" (id, username, name, role, password) VALUES (2, 'user@is2.it', 'User', 2, '$2a$10$yK1pW21E8nlZd/YcOt6uB.n8l36a33RP3/hehbWFAcBsFJhVKlZ82');
-
-  
-    
+INSERT INTO auth."USERS" (id, username, name, role, password) VALUES (1, 'admin@auth.it', 'Administrator', 1, '$2a$10$VB7y/I.oD16QBVaExgH1K.VEuBUKRyXcCUVweUGhs1vDl0waTQPmC');
+INSERT INTO auth."USERS" (id, username, name, role, password) VALUES (2, 'user@auth.it', 'User', 2, '$2a$10$yK1pW21E8nlZd/YcOt6uB.n8l36a33RP3/hehbWFAcBsFJhVKlZ82');
