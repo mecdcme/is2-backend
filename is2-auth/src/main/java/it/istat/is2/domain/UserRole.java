@@ -13,7 +13,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "ROLES", schema = "public")
+@Table(name = "ROLES", schema = "auth")
 public class UserRole implements Serializable {
 
 	private static final long serialVersionUID = 1L;
