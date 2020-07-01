@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>is2-common</module>
-		<module>is2-cloud/is2-gateway</module>
+		<module>is2-cloud</module>
 		<module>is2-auth</module>
 		<!-- module>is2-catalogue</module -->
 		<module>is2-gsbpm</module>
