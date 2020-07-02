@@ -47,7 +47,7 @@
 			<groupId>it.istat.is2backend</groupId>
 			<artifactId>is2-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<!--scope>compile</scope-->
+			<!-- scope>compile</scope -->
 		</dependency>
 	</dependencies>
 
