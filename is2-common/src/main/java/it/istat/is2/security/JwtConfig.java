@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class JwtConfig {
     @Value("${security.jwt.uri:/api/v1/auth/signin}")
-    private String Uri;a
+    private String Uri;
 
     @Value("${security.jwt.header:jwt-auth}")
     private String header;
