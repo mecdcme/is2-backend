@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		
-<groupId>it.istat.is2backend</groupId>
+<groupId>it.istat.is2backend.cloud</groupId>
 	<artifactId>is2-cloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-<!-- relativePath>../pom.xml</relativePath -->
+<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>is2-gateway</artifactId>
 	<name>is2-gateway</name>
@@ -50,6 +50,7 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
+
 
 	<dependencyManagement>
 		<dependencies>
