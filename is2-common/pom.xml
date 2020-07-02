@@ -8,8 +8,6 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>is2-common</artifactId>
-	<name>is2-common</name>
-	<description>common-api</description>
 	  <packaging>jar</packaging>
 	<dependencies>
 		<!-- 
