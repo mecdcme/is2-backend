@@ -10,7 +10,7 @@
 	<artifactId>is2-common</artifactId>
 	<name>is2-common</name>
 	<description>common-api</description>
-
+	  <packaging>jar</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
