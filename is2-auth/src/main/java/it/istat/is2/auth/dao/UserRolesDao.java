@@ -21,19 +21,21 @@
  * @author Stefano Macone <macone @ istat.it>
  * @version 1.0
  */
-package it.istat.is2.dao;
+package it.istat.is2.auth.dao;
 
-
+import java.util.List;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import it.istat.is2.domain.User;
+import it.istat.is2.auth.domain.UserRole;
+
 
 
 @Repository
-public interface UserDao extends CrudRepository<User, Long> {
+public interface UserRolesDao extends CrudRepository<UserRole, Long> {
 
-	User findByUsername(String username);
-
+    @Query("select a.name from UserRole a, User b where b.username=?1 and a=b.role")
+    public List<String> findRolesByUsername(String username);
 
 }

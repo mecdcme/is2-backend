@@ -1,4 +1,4 @@
-package it.istat.is2.dto;
+package it.istat.is2.auth.dto;
 
 import java.io.Serializable;
 

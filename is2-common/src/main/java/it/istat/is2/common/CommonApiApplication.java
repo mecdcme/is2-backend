@@ -1,4 +1,4 @@
-package it.istat.is2;
+package it.istat.is2.common;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

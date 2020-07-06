@@ -1,4 +1,4 @@
-package it.istat.is2;
+package it.istat.is2.auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -11,16 +11,12 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import it.istat.is2.security.JwtAuthenticationEntryPoint;
-import it.istat.is2.security.JwtConfig;
-import it.istat.is2.security.JwtUsernameAndPasswordAuthenticationFilter;
+import it.istat.is2.auth.security.JwtAuthenticationEntryPoint;
+import it.istat.is2.auth.security.JwtUsernameAndPasswordAuthenticationFilter;
+import it.istat.is2.common.security.JwtConfig;
 
 
-
-
-
-
-@EnableWebSecurity 	// Enable security config. This annotation denotes config for spring security.
+@EnableWebSecurity 
 public class SecurityCredentialsConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired

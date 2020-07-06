@@ -1,4 +1,4 @@
-package it.istat.is2.domain;
+package it.istat.is2.auth.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;

@@ -1,4 +1,4 @@
-package it.istat.is2.security;
+package it.istat.is2.auth.security;
 
 import java.io.IOException;
 
@@ -21,6 +21,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import it.istat.is2.common.security.JwtConfig;
 
 
 public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {

@@ -21,7 +21,7 @@
  * @author Stefano Macone <macone @ istat.it>
  * @version 1.0
  */
-package it.istat.is2.service;
+package it.istat.is2.auth.service;
 
 import java.util.List;
 
@@ -35,10 +35,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
-import it.istat.is2.dao.UserDao;
-import it.istat.is2.dao.UserRolesDao;
-import it.istat.is2.domain.User;
-import it.istat.is2.security.CustomUserDetails;
+import it.istat.is2.auth.dao.UserDao;
+import it.istat.is2.auth.dao.UserRolesDao;
+import it.istat.is2.auth.domain.User;
+import it.istat.is2.auth.security.CustomUserDetails;
 
 
 @Service

@@ -1,4 +1,4 @@
-package it.istat.is2.service;
+package it.istat.is2.auth.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,11 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import it.istat.is2.dao.UserDao;
-
-import it.istat.is2.domain.User;
-import it.istat.is2.domain.UserRole;
-import it.istat.is2.dto.UserDTO;
+import it.istat.is2.auth.dao.UserDao;
+import it.istat.is2.auth.domain.User;
+import it.istat.is2.auth.domain.UserRole;
+import it.istat.is2.auth.dto.UserDTO;
 
 @Service
 public class UserService {

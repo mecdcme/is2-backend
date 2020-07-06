@@ -13,6 +13,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
  
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import it.istat.is2.common.security.JwtConfig;
+
 
 
 

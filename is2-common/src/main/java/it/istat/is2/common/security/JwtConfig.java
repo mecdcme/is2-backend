@@ -1,4 +1,4 @@
-package it.istat.is2.security;
+package it.istat.is2.common.security;
 
 import org.springframework.beans.factory.annotation.Value;
 

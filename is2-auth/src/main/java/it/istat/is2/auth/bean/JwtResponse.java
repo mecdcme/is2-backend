@@ -1,4 +1,4 @@
-package it.istat.is2.bean;
+package it.istat.is2.auth.bean;
 
 import java.io.Serializable;
 

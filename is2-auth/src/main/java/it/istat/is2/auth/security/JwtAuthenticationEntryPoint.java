@@ -1,4 +1,4 @@
-package it.istat.is2.security;
+package it.istat.is2.auth.security;
 
 import java.io.IOException;
 import java.io.Serializable;

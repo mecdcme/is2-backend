@@ -21,7 +21,7 @@
  * @author Stefano Macone <macone @ istat.it>
  * @version 1.0
  */
-package it.istat.is2.security;
+package it.istat.is2.auth.security;
 
 import java.util.Collection;
 import java.util.List;
@@ -30,7 +30,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.StringUtils;
 
-import it.istat.is2.domain.User;
+import it.istat.is2.auth.domain.User;
 
 
 

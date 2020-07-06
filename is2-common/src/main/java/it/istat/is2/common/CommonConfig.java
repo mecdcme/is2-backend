@@ -1,4 +1,4 @@
-package it.istat.is2;
+package it.istat.is2.common;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

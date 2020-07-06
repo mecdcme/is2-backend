@@ -1,4 +1,4 @@
-package it.istat.is2.controllers;
+package it.istat.is2.auth.controllers;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import it.istat.is2.dto.UserDTO;
-import it.istat.is2.service.UserService;
+import it.istat.is2.auth.dto.UserDTO;
+import it.istat.is2.auth.service.UserService;
 
 @RestController
 @RequestMapping(value = "/api/v1/closed/users", produces = MediaType.APPLICATION_JSON_VALUE)
